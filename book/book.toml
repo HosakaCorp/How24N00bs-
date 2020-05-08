@@ -1,0 +1,14 @@
+[book]
+authors = ["DarthDomino"]
+multilingual = false
+src = "src"
+title = "Hacker Stalker: Safety Planning for those Battling Against Aggressive and Tech-Savvy Stalkers"
+description = "Safety Planning for those Battling Against Aggressive and Tech-Savvy Stalkers"
+
+[build]
+build-dir = "build"
+
+[output.html]
+theme = "domino"
+default-theme = "domino"
+additional-css = ["domino/RobotoSlab-Regular.ttf"]
