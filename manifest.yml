@@ -1,0 +1,20 @@
+image: alpine/edge
+arch: x86_64
+packages:
+  - mdbook
+sources:
+  - https://github.com/DarthDomino/How24N00bs-
+  - https://github.com/DarthDomino/darthdomino.github.io
+secrets:
+- 46f739e5-4538-45dd-a79f-bf173b7a2ed9
+- tasks: 
+  - build: |
+    cd How24N00bs-/book/
+    mdbook test
+    mdbook build
+  - deploy: |
+    cp -r Ho24N00bs-/book/* darthdomino.github.io/
+    cd darthdomino.github.io/
+    git add -A
+    git commit -m "poptart-ci: autocommit"
+    git push -f
